@@ -19,43 +19,70 @@
   <title>Drift</title>
 </head>
 <body>
+
+  <div class="user-header">
+  <!--Navbar -->
+  <!-- https://mdbootstrap.com/docs/jquery/navigation/navbar/ -->
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+        aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Create Event</a>
+          </li>
+        </ul>
+        <ul id="avatar-bar" class="navbar-nav ml-auto nav-flex-icons">
+          <li id="1" class="nav-item avatar">
+            <a class="nav-link p-0" href="#">
+              <img src="https://i.pinimg.com/originals/58/78/9e/58789e6eb03f34a1d1f65aad3f9cd188.jpg" class="rounded-circle z-depth-0"
+                alt="avatar image" height="40">
+            </a>
+          </li>
+          <li id="2" class="nav-item avatar">
+            <a class="nav-link p-0" href="#">
+              <img src="http://asg.animatedheroes.com/albums/incredible/Bob_headshot.jpg" class="rounded-circle z-depth-0"
+                alt="avatar image" height="40">
+            </a>
+          </li>
+          <li id="3" class="nav-item avatar">
+            <a class="nav-link p-0" href="#">
+              <img src="https://giantbomb1.cbsistatic.com/uploads/scale_medium/4/48227/1309990-violet.jpg" class="rounded-circle z-depth-0"
+                alt="avatar image" height="40">
+            </a>
+          </li>
+          <li id="4" class="nav-item avatar">
+            <a class="nav-link p-0" href="#">
+              <img src="https://giantbomb1.cbsistatic.com/uploads/square_small/13/135472/2095727-103181_dash_incredibles.jpg" class="rounded-circle z-depth-0"
+                alt="avatar image" height="40">
+            </a>
+          </li>
+          <li id="5" class="nav-item avatar">
+            <a class="nav-link p-0" href="#">
+              <img src="https://vignette.wikia.nocookie.net/the-incredibles/images/d/d1/Jack-Jack-Parr.jpg/revision/latest?cb=20180129190932" class="rounded-circle z-depth-0"
+                alt="avatar image" height="40">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--/Navbar -->
+  </div>
   
   <div class="calendar">
   
-    <div class="month">
+    <div id="month" class="month">
       <!-- Inner Text -- Current month, year -->
-      <h1 id="title">August - 2019</h1>
-      <span class="day">1</span>
-      <span class="day">2</span>
-      <span class="day">3</span>
-      <span class="day">4</span>
-      <span class="day">5</span>
-      <span class="day">6</span>
-      <span class="day">7</span>
-      <span class="day">8</span>
-      <span class="day">9</span>
-      <span class="day">10</span>
-      <span class="day">11</span>
-      <span class="day">12</span>
-      <span class="day">13</span>
-      <span class="day">14</span>
-      <span class="day">15</span>
-      <span class="day">16</span>
-      <span class="day">17</span>
-      <span class="day">18</span>
-      <span class="day">19</span>
-      <span class="day">20</span>
-      <span class="day">21</span>
-      <span class="day">22</span>
-      <span class="day">23</span>
-      <span class="day current">24</span>
-      <span class="day">25</span>
-      <span class="day">26</span>
-      <span class="day">27</span>
-      <span class="day">28</span>
-      <span class="day">29</span>
-      <span class="day">30</span>
-      <span class="day">31</span>
+      <h1 id="title">
+        <span id="monthTitle">August </span>
+        <span id="yearTitle"> </span>
+      </h1>
+      <div id="dayBoxes">
+        
+      </div>
       <div class="clearfix"></div>
     </div>
   </div>
