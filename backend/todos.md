@@ -4,9 +4,13 @@ Change selected day to current
 Click listeners for each day -->
 <!-- Add navbar of each user's name/photo -->
 Change display and events based on selected user
+<!-- Change display of days based on month -->
+Add previous/next buttons, functionality
 Pop up window of selected day's events
 Pop up window to add an event
 Display all events when navbar home button clicked
+Current day display
+Hide next and previous buttons at start and end of year
 
 Indicate which days have events
 Add seed events to calendar

@@ -5,12 +5,12 @@
 .clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;line-height:0;content:""}.clearfix:after{clear:both}
 
 
-body{
+body {
   background:rgb(14, 161, 147);
   height: 100%;
 }
 
-.calendar{
+.calendar {
   margin:40px auto;
   width:70%;
   padding:20px;
@@ -21,7 +21,7 @@ body{
 }
 
 .calendar:before,
-.calendar:after{
+.calendar:after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -69,7 +69,7 @@ body{
 }
   
 .calendar .day.current{
-  background:rgba(236, 154, 24, 1);
+  background:rgb(249, 176, 60);
   color:#f7f7f7;
   box-shadow:inset 0 0 20px rgba( 0,0,0, .4);
   text-shadow:1px 1px 2px rgba(0,0,0,.4);
@@ -77,12 +77,40 @@ body{
 
 /* End calendar body */
 
-/* Navabar */
+/* Navbar */
 .avatar {
   margin-right: 1.5em;
 }
 
+/* Day labels */
 #dayNames .day {
   padding: 20px;
   font-size: 0.8em;
+}
+
+#dayNames .day:hover {
+  background:#ddd;
+  box-shadow: none;
+  text-shadow: none;
+  color:rgb(14, 161, 147);
+  cursor: default;
+}
+
+/* Back and previous buttons */
+#previousButton a {
+  margin-right: 20%;
+  color: black;
+}
+
+#previousButton a:hover {
+  color: rgb(0, 4, 255);
+}
+
+#nextButton a {
+  margin-left: 20%;
+  color: black;
+}
+
+#nextButton a:hover {
+  color: rgb(0, 4, 255);
 }

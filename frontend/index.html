@@ -24,7 +24,7 @@
   <!--Navbar -->
   <!-- https://mdbootstrap.com/docs/jquery/navigation/navbar/ -->
   <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
-      <a class="navbar-brand" href="#">Parr Family</a>
+      <a id="family-name" class="navbar-brand" href="#">Parr Family</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
         aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Create Event</a>
+            <a id="first-name" class="nav-link" href="#">First Name</a>
           </li>
         </ul>
         <ul id="avatar-bar" class="navbar-nav ml-auto nav-flex-icons">
@@ -75,8 +75,10 @@
   <div class="calendar">
     <div id="month" class="month">
       <h1 id="title">
+        <span id="previousButton"><a href="#"><i class="far fa-arrow-alt-circle-left"></i></a></span>
         <span id="monthTitle"> </span>
         <span id="yearTitle"> </span>
+        <span id="nextButton"><a href="#"><i class="far fa-arrow-alt-circle-right"></i></a></span>
       </h1>
       <div id="dayNames">
         <span class="day dayLabels">S</span>

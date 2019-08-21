@@ -12,11 +12,12 @@ let daySpans = document.getElementsByClassName('day')
 let dayBoxes = document.getElementById('dayBoxes')
 let monthTitle = document.getElementById('monthTitle')
 let yearTitle = document.getElementById('yearTitle')
-
-
-// Current day
-let currentDay = () => {
-  let month = new Array();
+let title = document.getElementById('title')
+const nextButton = document.getElementById('nextButton')
+const previousButton = document.getElementById('previousButton')
+const familyName = document.getElementById('family-name')
+const firstName = document.getElementById('first-name')
+let month = new Array();
   month[0] = "January";
   month[1] = "February";
   month[2] = "March";
@@ -29,13 +30,20 @@ let currentDay = () => {
   month[9] = "October";
   month[10] = "November";
   month[11] = "December";
+  // ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+let currentMonth
+let date = new Date()
+let today = date.getDate()
+currentMonth = month[date.getMonth()];
 
+// Current day
+let currentDay = () => {
   let date = new Date()
   let today = date.getDate()
-  let currentMonth = month[date.getMonth()];
   let year = date.getFullYear();
 
   document.getElementById(today).className += " current"
+
   // Title
   monthTitle.innerText = `${currentMonth}`
   yearTitle.innerText = `${year}`
@@ -50,15 +58,15 @@ const fetchEvents = () => {
   })
 }
 
-// Click listener for arrows call createDays and pass in 1 for how many times it's been clicked
-let displayedTime = new Date().getMonth()
+let displayedMonth = new Date().getMonth()
 
-const createDays = (displayedMonth = 0) => {
-  displayedTime += displayedMonth
-  const firstDays = [2, 5, 5, 1, 3, 6, 1, 4, 0, 2, 5, 0]
-  const startDay = firstDays[displayedTime]
-  const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-  const numOfDays = monthDays[displayedTime]
+const createDays = (monthModifier = 0) => {
+  displayedMonth += monthModifier
+  const firstDays2019 = [2, 5, 5, 1, 3, 6, 1, 4, 0, 2, 5, 0]
+  // const firstDays2020 = [3, 6, 0, 3, 5, 1, 3, 6, 2, 4, 0, 2]
+  const startDay = firstDays2019[displayedMonth]
+  const monthDays2019 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  const numOfDays = monthDays2019[displayedMonth]
   let dayCounter = 1;
 
   for (let i = 0; i < 35; i++) {
@@ -82,24 +90,25 @@ const displayUser = () => {
     if (selectedUser.id == 1) {
       let color1 = 'rgb(' + 255 + ',' + 99 + ',' + 99 + ')';
       document.body.style.backgroundColor = color1;
-      monthTitle.style.color = color1;
-      dayBoxes.innerText.style = color1;
+      title.style.color = color1;
+      // daySpans.innerText.style.color = color1;
+      // daySpans.innerText.style
     } else if (selectedUser.id == 2) {
       let color2 = 'rgb(' + 115 + ',' + 167 + ',' + 250 + ')';
       document.body.style.backgroundColor = color2;
-      monthTitle.style.color = color2;
+      title.style.color = color2;
     } else if (selectedUser.id == 3) {
       let color3 = 'rgb(' + 223 + ',' + 128 + ',' + 255 + ')';
       document.body.style.backgroundColor = color3;
-      monthTitle.style.color = color3;
+      title.style.color = color3;
     } else if (selectedUser.id == 4) {
       let color4 = 'rgb(' + 250 + ',' + 179 + ',' + 97 + ')';
       document.body.style.backgroundColor = color4;
-      monthTitle.style.color = color4;
+      title.style.color = color4;
     } else if (selectedUser.id == 5) {
       let color5 = 'rgb(' + 36 + ',' + 199 + ',' + 60 + ')';
       document.body.style.backgroundColor = color5;
-      monthTitle.style.color = color5;
+      title.style.color = color5;
     }
     // if (selectedUser )
       // Fetch individual user's events
@@ -107,6 +116,50 @@ const displayUser = () => {
       // Store in a global variable
   })
 }
+
+const incrementMonth = () => {
+  let currentIndex = month.indexOf(currentMonth)
+  currentMonth = month[currentIndex + 1]
+  monthTitle.innerText = currentMonth
+}
+
+const decrementMonth = () => {
+  let currentIndex = month.indexOf(currentMonth)
+  currentMonth = month[currentIndex - 1]
+  monthTitle.innerText = currentMonth
+}
+
+// Change page
+const turnPage = () => {
+  nextButton.addEventListener('click', () => {
+    removeDays()
+    createDays(1)
+    incrementMonth()
+  })
+
+  if 
+
+  previousButton.addEventListener('click', () => {
+    removeDays()
+    createDays(-1)
+    decrementMonth()
+  })
+}
+
+// Clear page
+const removeDays = () => {
+  let parent = document.getElementById("dayBoxes");
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+}
+
+// Display all
+  familyName.addEventListener('click', () => {
+    let familyColor = 'rgb(' + 14 + ',' + 161 + ',' + 147 + ')';
+    document.body.style.backgroundColor = familyColor;
+    title.style.color = familyColor;
+  })
 
 // Create
 
@@ -123,3 +176,4 @@ const displayUser = () => {
 // Function calls
 createDays()
 displayUser()
+turnPage()
