@@ -2,7 +2,7 @@
 CSS Calendar
 Change selected day to current
 Click listeners for each day -->
-Add navbar of each user's name/photo
+<!-- Add navbar of each user's name/photo -->
 Change display and events based on selected user
 Pop up window of selected day's events
 Pop up window to add an event
