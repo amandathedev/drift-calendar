@@ -101,22 +101,9 @@ User.create(
 
 
 # User Events
-UserEvent.create(
-
-)
-
-UserEvent.create(
-
-)
-
-UserEvent.create(
-
-)
-
-UserEvent.create(
-
-)
-
-UserEvent.create(
-
-)
+20.times do 
+  UserEvent.create(
+    user_id: rand(1..5),
+    event_id: rand(1..7)
+  )
+end
