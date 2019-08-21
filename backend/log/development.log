@@ -9596,3 +9596,509 @@ Processing by Api::V1::UsersController#index as */*
 Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "year", "month", "day", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dentist Appointment"], ["year", 2019], ["month", 8], ["day", 17], ["time", 11], ["created_at", "2019-08-21 21:25:41.428242"], ["updated_at", "2019-08-21 21:25:41.428242"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("name", "year", "month", "day", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Birthday Party"], ["year", 2019], ["month", 8], ["day", 9], ["time", 14], ["created_at", "2019-08-21 21:25:41.432143"], ["updated_at", "2019-08-21 21:25:41.432143"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("name", "year", "month", "day", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Parent-Teacher Conferences"], ["year", 2019], ["month", 8], ["day", 29], ["time", 17], ["created_at", "2019-08-21 21:25:41.434506"], ["updated_at", "2019-08-21 21:25:41.434506"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("name", "year", "month", "day", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Karate Class"], ["year", 2019], ["month", 8], ["day", 1], ["time", 9], ["created_at", "2019-08-21 21:25:41.436920"], ["updated_at", "2019-08-21 21:25:41.436920"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:43
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("name", "year", "month", "day", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Doctor Appointment"], ["year", 2019], ["month", 8], ["day", 14], ["time", 11], ["created_at", "2019-08-21 21:25:41.439394"], ["updated_at", "2019-08-21 21:25:41.439394"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:51
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("name", "year", "month", "day", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Anniversary Dinner"], ["year", 2019], ["month", 8], ["day", 6], ["time", 20], ["created_at", "2019-08-21 21:25:41.442315"], ["updated_at", "2019-08-21 21:25:41.442315"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:59
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("name", "year", "month", "day", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Playdate"], ["year", 2019], ["month", 8], ["day", 22], ["time", 8], ["created_at", "2019-08-21 21:25:41.445229"], ["updated_at", "2019-08-21 21:25:41.445229"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:69
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Helen Parr"], ["email", "helenparr@gmail.com"], ["img_url", "https://img.buzzfeed.com/buzzfeed-static/static/2016-08/10/13/enhanced/buzzfeed-prod-web04/original-grid-image-17681-1470848833-1.jpg?crop=411:617;14,8&downsize=400:*&output-format=auto&output-quality=auto"], ["created_at", "2019-08-21 21:25:41.466340"], ["updated_at", "2019-08-21 21:25:41.466340"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:75
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bob Parr"], ["email", "bobparr@gmail.com"], ["img_url", "http://asg.animatedheroes.com/albums/incredible/Bob_headshot.jpg"], ["created_at", "2019-08-21 21:25:41.468542"], ["updated_at", "2019-08-21 21:25:41.468542"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Violet Parr"], ["email", "violetparr@gmail.com"], ["img_url", "https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Violet_Parr.jpg/220px-Violet_Parr.jpg"], ["created_at", "2019-08-21 21:25:41.470458"], ["updated_at", "2019-08-21 21:25:41.470458"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dash Parr"], ["email", "dashparr@gmail.com"], ["img_url", "https://vignette.wikia.nocookie.net/pixar/images/a/a5/I2_-_Dash.png/revision/latest?cb=20180621012105"], ["created_at", "2019-08-21 21:25:41.472113"], ["updated_at", "2019-08-21 21:25:41.472113"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:94
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jack-Jack Parr"], ["email", "jjparr@gmail.com"], ["img_url", "https://vignette.wikia.nocookie.net/pixar/images/4/41/I2_-_Jack-Jack.png/revision/latest?cb=20180621022350"], ["created_at", "2019-08-21 21:25:41.474134"], ["updated_at", "2019-08-21 21:25:41.474134"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 4], ["created_at", "2019-08-21 21:25:41.488446"], ["updated_at", "2019-08-21 21:25:41.488446"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["event_id", 1], ["created_at", "2019-08-21 21:25:41.491767"], ["updated_at", "2019-08-21 21:25:41.491767"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["event_id", 5], ["created_at", "2019-08-21 21:25:41.497101"], ["updated_at", "2019-08-21 21:25:41.497101"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["event_id", 2], ["created_at", "2019-08-21 21:25:41.499447"], ["updated_at", "2019-08-21 21:25:41.499447"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["event_id", 7], ["created_at", "2019-08-21 21:25:41.518420"], ["updated_at", "2019-08-21 21:25:41.518420"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["event_id", 5], ["created_at", "2019-08-21 21:25:41.522145"], ["updated_at", "2019-08-21 21:25:41.522145"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["event_id", 1], ["created_at", "2019-08-21 21:25:41.525254"], ["updated_at", "2019-08-21 21:25:41.525254"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["event_id", 1], ["created_at", "2019-08-21 21:25:41.529301"], ["updated_at", "2019-08-21 21:25:41.529301"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["event_id", 7], ["created_at", "2019-08-21 21:25:41.532583"], ["updated_at", "2019-08-21 21:25:41.532583"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["event_id", 5], ["created_at", "2019-08-21 21:25:41.535758"], ["updated_at", "2019-08-21 21:25:41.535758"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["event_id", 6], ["created_at", "2019-08-21 21:25:41.539010"], ["updated_at", "2019-08-21 21:25:41.539010"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 5], ["created_at", "2019-08-21 21:25:41.542187"], ["updated_at", "2019-08-21 21:25:41.542187"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["event_id", 5], ["created_at", "2019-08-21 21:25:41.545019"], ["updated_at", "2019-08-21 21:25:41.545019"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["event_id", 6], ["created_at", "2019-08-21 21:25:41.547760"], ["updated_at", "2019-08-21 21:25:41.547760"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["event_id", 4], ["created_at", "2019-08-21 21:25:41.550436"], ["updated_at", "2019-08-21 21:25:41.550436"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["event_id", 1], ["created_at", "2019-08-21 21:25:41.552795"], ["updated_at", "2019-08-21 21:25:41.552795"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["event_id", 5], ["created_at", "2019-08-21 21:25:41.555313"], ["updated_at", "2019-08-21 21:25:41.555313"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["event_id", 7], ["created_at", "2019-08-21 21:25:41.557999"], ["updated_at", "2019-08-21 21:25:41.557999"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 1], ["created_at", "2019-08-21 21:25:41.560669"], ["updated_at", "2019-08-21 21:25:41.560669"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:105
+  [1m[36mUserEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["event_id", 5], ["created_at", "2019-08-21 21:25:41.562818"], ["updated_at", "2019-08-21 21:25:41.562818"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:28:16 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amandatreutler/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 52ms (Views: 31.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:31:54 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:32:08 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:32:29 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:32:44 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:33:05 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:33:39 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:33:54 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:34:23 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:36:04 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:36:30 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:40:04 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:40:30 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:44:54 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:49:38 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:51:14 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:52:41 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:54:45 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:54:54 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:55:14 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:56:42 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-08-21 16:57:19 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+

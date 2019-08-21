@@ -1,8 +1,8 @@
 // URLs
-const rootUrl = "http://localhost:3000"
-const userUrl = `${rootUrl}/users`
-const eventUrl = `${rootUrl}/events`
-const usereventsUrl = `${rootUrl}/userevents`
+const rootUrl = "http://localhost:3000/api/v1"
+const usersUrl = `${rootUrl}/users`
+const eventsUrl = `${rootUrl}/events`
+const usereventsUrl = `${rootUrl}/user_events`
 
 // HTML Components
 const calendarDiv = document.getElementById('calendar')
@@ -35,6 +35,10 @@ let date = new Date()
 let today = date.getDate()
 currentMonth = month[date.getMonth()];
 
+// TEMP Variables
+const userId = 1
+const userUrl = `${usersUrl}/${userId}`
+
 // Current day
 let currentDay = () => {
   let date = new Date()
@@ -49,18 +53,41 @@ let currentDay = () => {
 }
 
 // Read
-// const fetchEvents = () => {
-//   fetch(eventUrl)
-//   .then(resp => resp.json())
-//   .then(events => {
-//     events.forEach(event => {renderEvent(event)})
-//   })
-// }
+
+const fetchUserEvents = () => {
+  return fetch(userUrl)
+  .then (resp => resp.json())
+  .then (userData => {
+    // console.log(userData.events)
+    userData.events.forEach(event => {
+      
+      const dayId = event.day
+      const dayBoxById = document.getElementById(`${dayId}`)
+      const eventName = document.createElement('p')
+      const eventYear = document.createElement('p')
+      const eventMonth = document.createElement('p')
+      const eventDay = document.createElement('p')
+      const eventTime = document.createElement('p')
+      eventName.innerText = event.name
+      eventYear.innerText = eventYear
+      eventMonth.innerText = event.month
+      eventDay.innerText = event.day
+      eventTime.innerText = `${event.time}:00`
+      dayBoxById.appendChild(eventName)
+      console.log(dayBoxById, event.name, event.year, event.month, event.day, `${event.time}:00`)
+    })
+                     
+  });
+  }
+
+fetchUserEvents()
 
 let displayedMonth = new Date().getMonth()
 
 const createDays = (monthModifier = 0) => {
-  displayedMonth += monthModifier
+  if (displayedMonth < 11) {
+    displayedMonth += monthModifier
+  }
   const firstDays2019 = [2, 5, 5, 1, 3, 6, 1, 4, 0, 2, 5, 0]
   // const firstDays2020 = [3, 6, 0, 3, 5, 1, 3, 6, 2, 4, 0, 2]
   const startDay = firstDays2019[displayedMonth]
@@ -74,10 +101,15 @@ const createDays = (monthModifier = 0) => {
       dayBox.innerText = dayCounter
       dayBox.id = dayCounter
       ++dayCounter
-    }    
+      dayBox.dataset.toggle = "modal"
+      dayBox.dataset.target = "#myModal"
+    }
     dayBoxes.append(dayBox)
     dayBox.className = "day"
   }
+  dayBoxes.addEventListener('click', () => {
+    displayModal()
+  })
   currentDay()
 }
 
@@ -160,6 +192,7 @@ const removeDays = () => {
   })
 
 // Create
+// Modal
 
 
 // Update
@@ -175,3 +208,6 @@ const removeDays = () => {
 createDays()
 displayUser()
 turnPage()
+
+
+
