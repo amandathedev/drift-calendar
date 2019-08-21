@@ -30,7 +30,6 @@ let month = new Array();
   month[9] = "October";
   month[10] = "November";
   month[11] = "December";
-  // ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 let currentMonth
 let date = new Date()
 let today = date.getDate()
@@ -50,13 +49,13 @@ let currentDay = () => {
 }
 
 // Read
-const fetchEvents = () => {
-  fetch(eventUrl)
-  .then(resp => resp.json())
-  .then(events => {
-    events.forEach(event => {renderEvent(event)})
-  })
-}
+// const fetchEvents = () => {
+//   fetch(eventUrl)
+//   .then(resp => resp.json())
+//   .then(events => {
+//     events.forEach(event => {renderEvent(event)})
+//   })
+// }
 
 let displayedMonth = new Date().getMonth()
 
@@ -137,7 +136,6 @@ const turnPage = () => {
     incrementMonth()
   })
 
-  if 
 
   previousButton.addEventListener('click', () => {
     removeDays()
