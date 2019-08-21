@@ -1,8 +1,8 @@
 // URLs
-const rootUrl = "http://localhost:3000"
+const rootUrl = "http://localhost:3000/api/v1"
 const usersUrl = `${rootUrl}/users`
 const eventsUrl = `${rootUrl}/events`
-const usereventsUrl = `${rootUrl}/userevents`
+const userEventsUrl = `${rootUrl}/user_events`
 
 // HTML Components
 const calendarDiv = document.getElementById('calendar')
@@ -13,6 +13,10 @@ let dayBoxes = document.getElementById('dayBoxes')
 let monthTitle = document.getElementById('monthTitle')
 let yearTitle = document.getElementById('yearTitle')
 
+// TEMP Variables
+
+const userId = 1
+const userUrl = `${usersUrl}/${userId}`
 
 // Current day
 let currentDay = () => {
@@ -42,13 +46,42 @@ let currentDay = () => {
 }
 
 // Read
-const fetchEvents = () => {
-  fetch(eventUrl)
-  .then(resp => resp.json())
-  .then(events => {
-    events.forEach(event => {renderEvent(event)})
-  })
-}
+
+// const fetchEvents = () => {
+//   fetch(eventsUrl)
+//   .then(resp => resp.json())
+//   .then(events => {
+//     events.forEach(event => {renderEvent(event)})
+//   })
+// }
+
+const fetchUserEvents = () => {
+  return fetch(userUrl)
+  .then (resp => resp.json())
+  .then (userData => {
+    // console.log(userData.events)
+    userData.events.forEach(event => {
+      
+      const dayId = event.day
+      const dayBoxById = document.getElementById(`${dayId}`)
+      const eventName = document.createElement('p')
+      const eventYear = document.createElement('p')
+      const eventMonth = document.createElement('p')
+      const eventDay = document.createElement('p')
+      const eventTime = document.createElement('p')
+      eventName.innerText = event.name
+      eventYear.innerText = eventYear
+      eventMonth.innerText = event.month
+      eventDay.innerText = event.day
+      eventTime.innerText = `${event.time}:00`
+      dayBoxById.appendChild(eventName)
+      console.log(dayBoxById, event.name, event.year, event.month, event.day, `${event.time}:00`)
+    })
+                     
+  });
+  }
+  
+fetchUserEvents();
 
 // Click listener for arrows call createDays and pass in 1 for how many times it's been clicked
 let displayedTime = new Date().getMonth()
@@ -84,6 +117,7 @@ const displayUser = () => {
       document.body.style.backgroundColor = color1;
       monthTitle.style.color = color1;
       dayBoxes.innerText.style = color1;
+
     } else if (selectedUser.id == 2) {
       let color2 = 'rgb(' + 115 + ',' + 167 + ',' + 250 + ')';
       document.body.style.backgroundColor = color2;
