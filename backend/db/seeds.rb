@@ -11,7 +11,7 @@
 Event.create(
   name: "Dentist Appointment",
   year: 2019,
-  month: 08,
+  month: 8,
   day: 17,
   time: 11
 )
@@ -19,15 +19,15 @@ Event.create(
 Event.create(
   name: "Birthday Party",
   year: 2019,
-  month: 08,
-  day: 09,
+  month: 8,
+  day: 9,
   time: 14
 )
 
 Event.create(
   name: "Parent-Teacher Conferences",
   year: 2019,
-  month: 08,
+  month: 8,
   day: 29,
   time: 17
 )
@@ -35,15 +35,15 @@ Event.create(
 Event.create(
   name: "Karate Class",
   year: 2019,
-  month: 08,
-  day: 01,
-  time: 09
+  month: 8,
+  day: 1,
+  time: 9
 )
 
 Event.create(
   name: "Doctor Appointment",
   year: 2019,
-  month: 08,
+  month: 8,
   day: 14,
   time: 11
 )
@@ -51,15 +51,15 @@ Event.create(
 Event.create(
   name: "Anniversary Dinner",
   year: 2019,
-  month: 08,
-  day: 06,
+  month: 8,
+  day: 6,
   time: 20
 )
 
 Event.create(
   name: "Playdate",
   year: 2019,
-  month: 08,
+  month: 8,
   day: 22,
   time: 8
 )
