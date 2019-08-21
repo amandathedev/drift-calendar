@@ -50,18 +50,26 @@ const fetchEvents = () => {
   })
 }
 
-const createDays = () => {
-  // let firstDay = j
-  let monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-  const numOfDays = monthDays[new Date().getMonth()]
-  console.log(numOfDays);
+// Click listener for arrows call createDays and pass in 1 for how many times it's been clicked
+let displayedTime = new Date().getMonth()
+
+const createDays = (displayedMonth = 0) => {
+  displayedTime += displayedMonth
+  const firstDays = [2, 5, 5, 1, 3, 6, 1, 4, 0, 2, 5, 0]
+  const startDay = firstDays[displayedTime]
+  const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  const numOfDays = monthDays[displayedTime]
+  let dayCounter = 1;
 
   for (let i = 0; i < 35; i++) {
-    let dayBox = document.createElement('span')
+    const dayBox = document.createElement('span')
+    if (i >= startDay && dayCounter <= numOfDays) {
+      dayBox.innerText = dayCounter
+      dayBox.id = dayCounter
+      ++dayCounter
+    }    
     dayBoxes.append(dayBox)
     dayBox.className = "day"
-    dayBox.innerText = i + 1
-    dayBox.id = i + 1
   }
   currentDay()
 }
