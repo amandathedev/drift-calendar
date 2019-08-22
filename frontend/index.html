@@ -15,7 +15,8 @@
   <script src="https://kit.fontawesome.com/29ab774530.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="assets/styles.css">
-
+  <!-- Add icon to browser tab -->
+  <link rel="icon" href="https://icon-library.net/images/calendar-icon-vector-free/calendar-icon-vector-free-15.jpg">
   <title>Drift</title>
 </head>
 <body>
@@ -114,31 +115,31 @@
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   </div>
 
   <!-- Create event modal -->
   <!-- https://bootsnipp.com/snippets/dlZAN -->
-  <div class="modal-container register modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="row" role="document">
+  <div class="modal-container register modal fade" id="createModal" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="row " role="document">
           <div class="col-md-3 register-left">
               <i class="far fa-calendar-alt fa-10x"></i>
               <h3>Create a new event</h3>
-              <input type="submit" data-dismiss="modal" name="" value="Done"/><br/>
+              <input type="submit" data-toggle="modal" id="closeModalButton" data-target="#createModal" name="" value="Done"/><br/>
+              <!-- <button type="button" class="btn btn-default" aria-label="Close" data-toggle="modal" data-target="#createModal" class="close" data-dismiss="modal">Close</button> -->
           </div>
-          <div class="col-md-9 register-right">
+          <div class="col-md-9 modal-content modal-dialog register-right">
               <div class="tab-content" id="myTabContent">
                   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                       <h3 class="register-heading">Parr Family</h3>
                       <div class="row register-form">
                           <div class="col-md-6">
                               <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Add event" value="" />
+                                  <input type="text" class="form-control" id="new-event-name" placeholder="Add event" value="" />
                               </div>
                               <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Description" value="" />
+                                  <input type="text" class="form-control" id="new-event-description" placeholder="Description" value="" />
                               </div>
                               <div class="maxl">
                                   <label class="radio inline"> 
@@ -165,12 +166,12 @@
                           </div>
                           <div class="col-md-6">
                               <div class="form-group">
-                                  <input type="date" class="form-control" placeholder="Date" value="" />
+                                  <input type="date" id="new-event-date" class="form-control" placeholder="Date" value="" />
                               </div>
                               <div class="form-group">
-                                  <input type="time" class="form-control" placeholder="Time" value="" />
+                                  <input type="time" id="new-event-time" class="form-control" placeholder="Time" value="" />
                               </div>
-                              <input type="submit" class="btnRegister"  value="Create"/>
+                              <input type="submit" id="new-event-submit" class="btnRegister"  value="Create"/>
                           </div>
                       </div>
                   </div>

@@ -14,12 +14,12 @@ a:hover {
 
 body {
   background:rgb(14, 161, 147);
-  height: 100%;
+  height: 80%;
 }
 
 .calendar {
   margin:40px auto;
-  width:70%;
+  width:50%;
   padding:20px;
   background:#f7f7f7;
   border:1px solid #ccc;
@@ -225,6 +225,15 @@ body {
 
 .person-select-span {
   margin-right: 20px;
+}
+
+.modal-dialog {
+  /* background-color: red; */
+  /* width: 60%;
+  height: 60%;
+  margin-left: 20%;
+  margin-right: 10%; */
+  /* display: flex; */
 }
 
 #createModal {
