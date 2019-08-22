@@ -6,23 +6,21 @@ Click listeners for each day -->
 Change display and events based on selected user
 <!-- Change display of days based on month -->
 Add previous/next buttons, functionality
-Pop up window of selected day's events
-Pop up window to add an event
+Modal to display selected day's events and add an event
 Display all events when navbar home button clicked
 Current day display
 Hide next and previous buttons at start and end of year
 
 Indicate which days have events
-Add seed events to calendar
+<!-- Add seed events to calendar -->
 Link events to each user
 
 
 
 User stories:
-User can view events for individual users
+Users can view events for individual users
 User can view all events
 User can create new events
 User can edit an event
 User can invite someone else to an event
 User can delete an event
-

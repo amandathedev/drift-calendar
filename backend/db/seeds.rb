@@ -32,13 +32,13 @@ Event.create(
   time: 17
 )
 
-Event.create(
-  name: "Karate Class",
-  year: 2019,
-  month: 8,
-  day: 1,
-  time: 9
-)
+# Event.create(
+#   name: "Karate Class",
+#   year: 2019,
+#   month: 8,
+#   day: 1,
+#   time: 9
+# )
 
 Event.create(
   name: "Doctor Appointment",
