@@ -17,6 +17,13 @@ module Api
         end
       end
 
+      def create
+        user = User.find_by(name: params[:username])
+        # puts user
+        # p params
+        event = Event.create(name: params[:name])
+        render json: event
+      end
 
     end
   end
