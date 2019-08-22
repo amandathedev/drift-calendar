@@ -72,7 +72,6 @@ const fetchUserEvents = () => {
   return fetch(userUrl)
   .then (resp => resp.json())
   .then (userData => {
-    // console.log(userData.events)
     userData.events.forEach(event => {
       const monthId = event.month
       const dayId = event.day
@@ -87,18 +86,15 @@ const fetchUserEvents = () => {
       eventMonth.innerText = event.month
       eventDay.innerText = event.day
       eventTime.innerText = `${event.time}:00`
-      // debugger
-      // dayBoxById.appendChild(eventName)
-      console.log(dayBoxById, event.name, event.year, event.month, event.day, `${event.time}:00`)
+      // console.log(dayBoxById, event.name, event.year, event.month, event.day, `${event.time}:00`)
     })                  
   });
   }
 
   
-  
+  // https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_modal&stacked=h
   const createDays = (monthModifier = 0) => {
     displayedMonthNum += monthModifier
-    // debugger
     const firstDays2019 = [2, 5, 5, 1, 3, 6, 1, 4, 0, 2, 5, 0]
     const startDay = firstDays2019[displayedMonthNum]
     const monthDays2019 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -163,30 +159,30 @@ const fetchUserEvents = () => {
   
   const decrementMonth = () => {
     displayedMonth = month[displayedMonthNum - 1]
-    if(displayedMonthNum <= 0){
-      // displayedMonthNum = 11
-    }
     monthTitle.innerText = displayedMonth
   }
   
   // Hide and show buttons
   const hideNextButton = () => {
     nextButton.style.display = 'none';
-    // center month title
+    // monthTitle.style.marginRight = '28%'
   }
   
   const showNextButton = () => {
     nextButton.style.display = "inline";
-    // center month title
+    // monthTitle.style.marginRight = '0%'
   }
 
   const hidePreviousButton = () => {
     previousButton.style.display = 'none';
+    // monthTitle.style.marginLeft = '28%'
   }
 
   const showPreviousButton = () => {
     previousButton.style.display = 'inline';
+    // monthTitle.style.marginLeft = '0%'
   }
+  
 
   // Change page
   nextButton.addEventListener('click', () => {
@@ -247,6 +243,7 @@ const fetchUserEvents = () => {
   // Create
   createEventButton.addEventListener('click', () => {
     console.log('clicked');
+    
   })
   
   
@@ -255,14 +252,12 @@ const fetchUserEvents = () => {
   
   // Destroy
   
-  
-  // Click listeners
+
   
   
   // Function calls
   createDays()
   displayUser()
-  // turnPage()
   fetchUserEvents()
   
   

@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a id="create-event" class="nav-link" href="#">Create Event</a>
+            <a id="create-event" data-toggle="modal" data-target="#createModal" class="nav-link" href="#">Create Event</a>
           </li>
         </ul>
         <ul id="avatar-bar" class="navbar-nav ml-auto nav-flex-icons">
@@ -75,10 +75,10 @@
   <div class="calendar">
     <div id="month" class="month">
       <h1 id="title">
-        <span id="previousButton"><a href="#"><i class="far fa-arrow-alt-circle-left"></i></a></span>
+        <span><a href="#"><i id="previousButton" class="far fa-arrow-alt-circle-left"></i></a></span>
         <span id="monthTitle"> </span>
         <span id="yearTitle"> </span>
-        <span id="nextButton"><a href="#"><i class="far fa-arrow-alt-circle-right"></i></a></span>
+        <span><a href="#"><i  id="nextButton" class="far fa-arrow-alt-circle-right"></i></a></span>
       </h1>
       <div id="dayNames">
         <span class="day dayLabels">S</span>
@@ -96,28 +96,88 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal for day view -->
   <div class="container">
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-        
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <p>Some text in the modal.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-          
-        </div>
-      </div>
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
       
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
     </div>
+  </div>
+
+  <!-- Create event modal -->
+  <!-- https://bootsnipp.com/snippets/dlZAN -->
+  <div class="modal-container register modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="row" role="document">
+          <div class="col-md-3 register-left">
+              <i class="far fa-calendar-alt fa-10x"></i>
+              <h3>Create a new event</h3>
+              <input type="submit" data-dismiss="modal" name="" value="Done"/><br/>
+          </div>
+          <div class="col-md-9 register-right">
+              <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <h3 class="register-heading">Parr Family</h3>
+                      <div class="row register-form">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Add event" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Description" value="" />
+                              </div>
+                              <div class="maxl">
+                                  <label class="radio inline"> 
+                                      <input type="radio" name="person-select" value="helen" checked>
+                                      <span class="person-select-span"> Helen </span> 
+                                  </label>
+                                  <label class="radio inline"> 
+                                      <input type="radio" name="person-select" value="bob">
+                                      <span class="person-select-span"> Bob </span> 
+                                  </label>
+                                  <label class="radio inline"> 
+                                      <input type="radio" name="person-select" value="violet">
+                                      <span class="person-select-span"> Violet </span> 
+                                  </label>
+                                  <label class="radio inline"> 
+                                      <input type="radio" name="person-select" value="dash">
+                                      <span class="person-select-span"> Dash </span> 
+                                  </label>
+                                  <label class="radio inline"> 
+                                      <input type="radio" name="person-select" value="jackjack">
+                                      <span class="person-select-span"> Jack-Jack </span> 
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <input type="date" class="form-control" placeholder="Date" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <input type="time" class="form-control" placeholder="Time" value="" />
+                              </div>
+                              <input type="submit" class="btnRegister"  value="Create"/>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+
+  </div>
 
   <!-- JS -->
   <script defer src="src/index.js"></script>
