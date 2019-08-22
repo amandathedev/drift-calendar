@@ -68,31 +68,46 @@ let titleMonth = () => {
 
 // Read
 
+
+function getUsersIds(usersData) {
+  return usersData.forEach(user => {
+    let usersArray = []
+    usersArray = usersArray.push(user.id)
+  })
+  return usersArray
+}
+
+const usersIds = () => {
+  return fetch(usersUrl)
+  .then(resp => resp.json())
+  .then(usersData => getUsersIds(usersData))
+}
+
+usersIds()
+
 const fetchUserEvents = () => {
   return fetch(userUrl)
   .then (resp => resp.json())
   .then (userData => {
-    // console.log(userData.events)
     userData.events.forEach(event => {
       const monthId = event.month
       const dayId = event.day
+      const modalBody = document.getElementById('modal-body')
       const dayBoxById = document.getElementById(`${monthId}/${dayId}`)
       const eventName = document.createElement('p')
-      const eventYear = document.createElement('p')
       const eventMonth = document.createElement('p')
       const eventDay = document.createElement('p')
       const eventTime = document.createElement('p')
-      eventName.innerText = event.name
-      eventYear.innerText = eventYear
+      eventName.innerText = `${event.time}:00` + " " + `${event.name}`
       eventMonth.innerText = event.month
       eventDay.innerText = event.day
       eventTime.innerText = `${event.time}:00`
+      modalBody.appendChild(eventName)
       // debugger
       // dayBoxById.appendChild(eventName)
-      console.log(dayBoxById, event.name, event.year, event.month, event.day, `${event.time}:00`)
     })                  
   });
-  }
+}
 
   
   
