@@ -18,6 +18,19 @@ const previousButton = document.getElementById('previousButton')
 const familyName = document.getElementById('family-name')
 const createEventButton = document.getElementById('create-event')
 
+// New event form
+let modalContainer = document.getElementById('createModal')
+let newEventName = document.getElementById('new-event-name')
+let newEventDescription = document.getElementById('new-event-description')
+let radioChoices = document.getElementsByName('person-select')
+let newEventDate = document.getElementById('new-event-date')
+let newEventTime = document.getElementById('new-event-time')
+let newEventSubmit = document.getElementById('new-event-submit')
+newEventSubmit.addEventListener('click', () => {
+  createNewEvent();
+})
+
+
 
 let month = new Array();
   month[0] = "January";
@@ -241,10 +254,19 @@ const fetchUserEvents = () => {
   })
   
   // Create
-  createEventButton.addEventListener('click', () => {
-    console.log('clicked');
-    
-  })
+  const createNewEvent = () => {
+    console.log(newEventName.value);
+    console.log(newEventDescription.value);
+    console.log(newEventDate.value);
+    console.log(newEventTime.value);
+    for(var i = 0, length = radioChoices.length; i < length; i++) {
+      if(radioChoices[i].checked) {
+        console.log(radioChoices[i].value);
+      }
+    }
+
+
+  }
   
   
   // Update
