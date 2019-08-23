@@ -136,8 +136,6 @@ const displayUser = () => {
       let color1 = 'rgb(' + 255 + ',' + 99 + ',' + 99 + ')';
       document.body.style.backgroundColor = color1;
       title.style.color = color1;
-      // daySpans.innerText.style.color = color1;
-      // daySpans.innerText.style
     } else if (selectedUser.id == 2) {
       let color2 = 'rgb(' + 115 + ',' + 167 + ',' + 250 + ')';
       document.body.style.backgroundColor = color2;
@@ -314,7 +312,10 @@ function addEventMarker() {
   userEventMarkers = []
   userEvents.forEach(event => {
     const dayId = event.day
+    console.log("day" + dayId);
     const monthId = event.month - 1
+    console.log("month" + monthId);
+    console.log(event);
     const dayToAddMarkerTo = document.getElementById(`${monthId}/${dayId}`)
     const eventMarker = document.createElement('p')
     eventMarker.innerText = '*'
