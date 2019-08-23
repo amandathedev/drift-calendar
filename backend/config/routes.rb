@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :events
       resources :user_events
       post '/create_new_user_event/:username', to: 'events#create'
+      # patch '/edit_event/:id', to: 'events#update'
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

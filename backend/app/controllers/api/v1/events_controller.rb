@@ -20,11 +20,21 @@ module Api
 
       def create
         user = User.find_by(name: params[:username])
-        # puts user
-        # p params
-        event = Event.create(name: params[:name])
+        event = Event.create(name: params[:name], year: params[:year], month: params[:month], day: params[:day], time: params[:time])
+        user.events << event
         render json: event
       end
+
+      def destroy
+        event = Event.find_by(id: params[:id])
+        event.delete
+        render json: {message: "Event deleted"}
+      end
+
+      def update
+        event = Event.find_by(id: params[:id])
+      end
+
 
     end
   end

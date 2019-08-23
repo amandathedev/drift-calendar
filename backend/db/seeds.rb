@@ -57,6 +57,54 @@ Event.create(
   time: 8
 )
 
+Event.create(
+  name: "Hair appointment",
+  year: 2019,
+  month: 8,
+  day: 5,
+  time: 8
+)
+
+Event.create(
+  name: "Concert",
+  year: 2019,
+  month: 8,
+  day: 2,
+  time: 8
+)
+
+Event.create(
+  name: "Bake Sale",
+  year: 2019,
+  month: 8,
+  day: 3,
+  time: 8
+)
+
+Event.create(
+  name: "Pool party",
+  year: 2019,
+  month: 8,
+  day: 22,
+  time: 8
+)
+
+Event.create(
+  name: "Library books due",
+  year: 2019,
+  month: 8,
+  day: 30,
+  time: 8
+)
+
+Event.create(
+  name: "Karate Class",
+  year: 2019,
+  month: 8,
+  day: 6,
+  time: 8
+)
+
 
 # Users
 User.create(
@@ -94,9 +142,9 @@ User.create(
 
 
 # User Events
-20.times do 
+50.times do 
   UserEvent.create(
     user_id: rand(1..5),
-    event_id: rand(1..7)
+    event_id: rand(1..12)
   )
 end

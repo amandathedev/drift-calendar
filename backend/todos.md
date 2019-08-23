@@ -1,3 +1,33 @@
+<!-- Create new events: -->
+<!-- Add to database -->
+<!-- Display event and marker on calendar -->
+
+<!-- Delete an event: -->
+<!-- Delete button listener -->
+<!-- Remove from database -->
+<!-- Remove from display -->
+
+Edit an event:
+<!-- Add button to modal -->
+<!-- Button listener -> redirect to create modal -->
+Edit in database
+Edit on display
+
+Functionality:
+Create form resets after submit
+<!-- Submit button closes modal -->
+<!-- Empty calendar days redirect to create modal -->
+Display all events when home button clicked
+Day marker updates live
+Day markers persist when coming back from another month
+Delete event confirm
+
+Style:
+Day modal
+
+
+
+
 <!-- Name
 CSS Calendar
 Change selected day to current

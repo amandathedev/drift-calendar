@@ -17,15 +17,18 @@ const nextButton = document.getElementById('nextButton')
 const previousButton = document.getElementById('previousButton')
 const familyName = document.getElementById('family-name')
 const createEventButton = document.getElementById('create-event')
+
 let userEvents = []
 let userEventMarkers = []
+let selectedUser
+
 
 // New event form
-let modalContainer = document.getElementById('createModal')
+// let modalContainer = document.getElementById('createModal')
 let newEventName = document.getElementById('new-event-name')
-let newEventDescription = document.getElementById('new-event-description')
 let radioChoices = document.getElementsByName('person-select')
-let newEventDate = document.getElementById('new-event-date')
+let newEventMonth = document.getElementById('new-event-month')
+let newEventDay = document.getElementById('new-event-day')
 let newEventTime = document.getElementById('new-event-time')
 let newEventSubmit = document.getElementById('new-event-submit')
 newEventSubmit.addEventListener('click', () => {
@@ -125,7 +128,7 @@ const createDays = (monthModifier = 0) => {
 const displayUser = () => {
   let navbarPics = document.getElementById('avatar-bar')
   navbarPics.addEventListener('click', () => {
-    let selectedUser = event.target.parentNode.parentNode
+    selectedUser = event.target.parentNode.parentNode
     userId = selectedUser.id
     userUrl = `${usersUrl}/${userId}`
     fetchUserEvents();
@@ -152,16 +155,13 @@ const displayUser = () => {
       document.body.style.backgroundColor = color5;
       title.style.color = color5;
     }
-    // if (selectedUser )
-    // Fetch individual user's events
-    // Iterate and display event indicator
-    // Store in a global variable
   })
 }
 
 const incrementMonth = () => {
   displayedMonth = month[displayedMonthNum + 1]
   monthTitle.innerText = displayedMonth
+  
 }
 
 const decrementMonth = () => {
@@ -172,22 +172,18 @@ const decrementMonth = () => {
 // Hide and show buttons
 const hideNextButton = () => {
   nextButton.style.display = 'none';
-  // monthTitle.style.marginRight = '28%'
 }
 
 const showNextButton = () => {
   nextButton.style.display = "inline";
-  // monthTitle.style.marginRight = '0%'
 }
 
 const hidePreviousButton = () => {
   previousButton.style.display = 'none';
-  // monthTitle.style.marginLeft = '28%'
 }
 
 const showPreviousButton = () => {
   previousButton.style.display = 'inline';
-  // monthTitle.style.marginLeft = '0%'
 }
 
 
@@ -198,11 +194,13 @@ nextButton.addEventListener('click', () => {
     removeDays()
     createDays(1)
     hideNextButton()
+    addEventMarker()
     rightButtonDisabled = true;
   } else {
     incrementMonth()
     removeDays()
     createDays(1)
+    addEventMarker()
   }
   
   if (leftButtonDisabled) {
@@ -218,11 +216,13 @@ previousButton.addEventListener('click', () => {
     removeDays()
     createDays(-1)
     hidePreviousButton()
+    addEventMarker()
     leftButtonDisabled = true;
   } else {
     decrementMonth()
     removeDays()
     createDays(-1)
+    addEventMarker()
   }
   
   if (rightButtonDisabled) {
@@ -238,8 +238,6 @@ const removeDays = () => {
   }
 }
 
-
-
 // Display all
 familyName.addEventListener('click', () => {
   let familyColor = 'rgb(' + 14 + ',' + 161 + ',' + 147 + ')';
@@ -247,29 +245,68 @@ familyName.addEventListener('click', () => {
   title.style.color = familyColor;
 })
 
-// Create
-createEventButton.addEventListener('click', () => {
-  console.log('clicked');
-  
-})
-
 //event listener for days
-
-dayBoxes.addEventListener('click', () => {
-  const dayId = event.srcElement.id
-  const modalBody = document.getElementById('modal-body')
-  modalBody.innerHTML = ''
-  userEvents.forEach(event => {
-    if (dayId.split("/")[1] == event.day && dayId.split("/")[0] == event.month - 1) {
-      const eventName = document.createElement('p')
-      eventName.innerText = `${event.time}:00` + ' ' + `${event.name}`
-      modalBody.appendChild(eventName)
+const clickDays = () => {
+  dayBoxes.addEventListener('click', () => {
+    let foundEvent = false;
+    const dayId = event.srcElement.id
+    const modalBody = document.getElementById('modal-body')
+    modalBody.innerHTML = ''
+    // If there's an event for this day
+    userEvents.forEach(myEvent => {
+      if (dayId.split("/")[1] == myEvent.day && dayId.split("/")[0] == myEvent.month - 1) {
+        
+        // const eventName = document.createElement('p')
+        // eventName.innerText = `${myEvent.time}:00` + ' ' + `${myEvent.name}`
+        // modalBody.appendChild(eventName)
+        const eventName = document.createElement('p')
+        eventName.innerHTML = `
+        <span id="${myEvent.id}">${myEvent.time}:00` + ' ' + `${myEvent.name}</span>
+        <button class="btn btn-primary editButtons" data-toggle="modal" id="edit-modal-${myEvent.id}" data-target="#editModal" >Edit</button>
+        <button class="btn btn-danger deleteButtons">Delete</button>
+        `
+        modalBody.appendChild(eventName, editButtons, deleteButtons)
+        foundEvent = true;
+        buttonFunc(myEvent)
+      }
+      
+    })
+    console.log(foundEvent);
+    if (!foundEvent) {
+      // TODO change top margin of day modal
+      $("#create-event").click()
+      setTimeout(() => {
+        $("#close-day-modal").click()
+      }, 500)
     }
+
   })
-})
+}
+
+
+let deleteButtons = document.getElementsByClassName('deleteButtons')
+let editButtons = document.getElementsByClassName('editButtons')
+
+const buttonFunc = (myEvent) => {
+  for (let i = 0; i < deleteButtons.length; i++) {
+    deleteButtons[i].addEventListener('click', () => {
+      deleteEvent(event)
+    })
+  }
+
+  for(let i = 0; i < editButtons.length; i++) {
+    editButtons[i].addEventListener('click', () => {
+      
+      editEvent(myEvent)
+      setTimeout(() => {
+        $("#close-day-modal").click()
+      }, 500)
+    })
+  }
+}
 
 // eventMarker on days 
-
+// TODO Fetch all users events on home click
 function addEventMarker() {
   userEventMarkers.forEach(node => {
     node.remove()
@@ -285,33 +322,85 @@ function addEventMarker() {
     userEventMarkers.push(eventMarker)
   })
 }
-
-// addEventMarker();
-
-// Update / Edit Post
-
   
-  // Create
-  const createNewEvent = () => {
-    console.log(newEventName.value);
-    console.log(newEventDescription.value);
-    console.log(newEventDate.value);
-    console.log(newEventTime.value);
-    for(var i = 0, length = radioChoices.length; i < length; i++) {
-      if(radioChoices[i].checked) {
-        console.log(radioChoices[i].value);
-      }
+// Create new event
+const createNewEvent = () => {
+  event.preventDefault();
+  newEventName.placeholder = "Add event"
+  let newEventUser
+  
+  for(let i = 0, length = radioChoices.length; i < length; i++) {
+    if(radioChoices[i].checked) {
+      newEventUser = radioChoices[i].value
     }
-
-
   }
   
-// Destroy Post
-  
+  fetch(rootUrl + '/create_new_user_event/' + newEventUser, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      name: newEventName.value,
+      year: 2019,
+      month: newEventMonth.value,
+      day: newEventDay.value,
+      time: newEventTime.value,
+    })
+  })
+  .then(resp => resp.json())
+    .then(event => {
+      userEvents.push(event)
+      fetchUserEvents()
+      addEventMarker()
+    })
+    // .catch(alert)
+  }
 
+// Destroy Post
+function deleteEvent(event) {
+  event_id = event.target.parentNode.childNodes[1].id
+  fetch(eventsUrl + "/" + event_id, {
+    method: "DELETE"
+  }).then(resp => {
+    event.target.parentNode.remove()
+    // $("#close-day-modal").click()
+    fetchUserEvents()
+    $("#close-day-modal").click()
+    // addEventMarker()
+  })
+}
+
+// Edit
+const editEvent = (event) => {
+  console.log(event);
+}
+
+// Update
+const updateEvent = (event) => {
+  console.log('got here');
+  event_id = event.target.parentNode.childNodes[1].id
+  fetch(eventsUrl + "/" + event_id, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      name: newEventName.value,
+      year: 2019,
+      month: newEventMonth.value,
+      day: newEventDay.value,
+      time: newEventTime.value,
+    })
+  }).then(resp => {
+    console.log(resp);
+  })
+}
   
-  
-  // Function calls
-  createDays()
-  displayUser()
-  fetchUserEvents();
+// Function calls
+createDays()
+displayUser()
+fetchUserEvents()
+clickDays()

@@ -125,6 +125,11 @@ body {
   margin-right: 5%;
 }
 
+/* Day modal */
+#day-modal {
+  /* margin-top: 2em; */
+}
+
 /* Create event modal */
 .register{
   background: -webkit-linear-gradient(left, #3931af, #00c6ff);
@@ -136,6 +141,8 @@ body {
   text-align: center;
   color: #fff;
   margin-top: 4%;
+  margin-bottom: 4%;
+  padding-top: 0;
 }
 .register-left input{
   border: none;
@@ -227,19 +234,36 @@ body {
   margin-right: 20px;
 }
 
-.modal-dialog {
-  /* background-color: red; */
-  /* width: 60%;
-  height: 60%;
-  margin-left: 20%;
-  margin-right: 10%; */
-  /* display: flex; */
-}
-
 #createModal {
   width: 60%;
   height: 60%;
   margin-left: 20%;
   margin-right: 10%;
 }
+
+#editModal {
+  width: 60%;
+  height: 60%;
+  margin-left: 20%;
+  margin-right: 10%;
+}
 /* End create event modal */
+
+/* New event form */
+
+#new-event-time {
+  width: 60px;
+  display: inline;
+  /* margin-left: 12px; */
+}
+
+/* End new event form */
+
+.editButtons {
+  /* margin-left: 8em; */
+  float: right;
+}
+
+.deleteButtons {
+  float: right;
+}
