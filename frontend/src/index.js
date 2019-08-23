@@ -35,6 +35,28 @@ newEventSubmit.addEventListener('click', () => {
   createNewEvent();
 })
 
+// Edit existing event form
+
+let editEventName = document.getElementById('edit-event-name')
+let editRadioChoices = document.getElementsByName('edit-person-select')
+let editEventMonth = document.getElementById('edit-event-month')
+let editEventDay = document.getElementById('edit-event-day')
+let editEventTime = document.getElementById('edit-event-time')
+let editEventSubmit = document.getElementById('edit-event-submit')
+// editEventSubmit.addEventListener('click', () => {
+//   createNewEvent();
+// })
+
+function setEditFormValues(myEvent) {
+  editEventName.value = myEvent.name
+  editRadioChoices.value = myEvent.radioChoices
+  editEventMonth.value = myEvent.month
+  editEventDay.value = myEvent.day
+  editEventTime.value = myEvent.time
+} 
+
+
+
 
 
 let month = new Array();
@@ -263,7 +285,9 @@ const clickDays = () => {
         <button class="btn btn-primary editButtons" data-toggle="modal" id="edit-modal-${myEvent.id}" data-target="#editModal" >Edit</button>
         <button class="btn btn-danger deleteButtons">Delete</button>
         `
+
         modalBody.appendChild(eventName, editButtons, deleteButtons)
+        $(`#edit-modal-${myEvent.id}`).click(() => setEditFormValues(myEvent))
         foundEvent = true;
         buttonFunc(myEvent)
       }
