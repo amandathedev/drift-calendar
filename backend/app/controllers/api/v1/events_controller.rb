@@ -1,7 +1,8 @@
 module Api
   module V1
     class EventsController < ActionController::Base
-      
+      # https://stackoverflow.com/questions/27098239/post-422-unprocessable-entity-in-rails-due-to-the-routes-or-the-controller/27098555
+      skip_before_action :verify_authenticity_token
       
       def index
         events = Event.all

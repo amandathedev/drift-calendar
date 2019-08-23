@@ -7,10 +7,11 @@ Click listeners for each day -->
 <!-- Change display of days based on month -->
 <!-- Add previous/next buttons, functionality -->
 Modal to display selected day's events 
-Modal to add an event
+<!-- Modal to add an event -->
   <!-- - Close button -->
   <!-- - Style -->
-  - Link to database
+  <!-- - Link to database -->
+Render new events
 Display all events when navbar home button clicked
 <!-- Current day display -->
 <!-- Hide next and previous buttons at start and end of year -->
@@ -19,6 +20,8 @@ Display all events when navbar home button clicked
 <!-- Indicate which days have events -->
 <!-- Add seed events to calendar -->
 <!-- Link events to each user -->
+Edit event -> redirect to create form
+Modals for empty days -> Redirect to create form
 
 
 
@@ -27,5 +30,5 @@ User stories:
 <!-- User can view all events -->
 User can create new events
 User can edit an event
-User can invite someone else to an event
+<!-- User can invite someone else to an event -->
 User can delete an event
