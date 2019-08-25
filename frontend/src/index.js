@@ -282,11 +282,11 @@ const clickDays = () => {
         const eventName = document.createElement('p')
         eventName.innerHTML = `
         <span id="${myEvent.id}">${myEvent.time}:00` + ' ' + `${myEvent.name}</span>
-        <button class="btn btn-primary editButtons" data-toggle="modal" id="edit-modal-${myEvent.id}" data-target="#editModal" >Edit</button>
+        
         <button class="btn btn-danger deleteButtons">Delete</button>
         `
 
-        modalBody.appendChild(eventName, editButtons, deleteButtons)
+        modalBody.appendChild(eventName, deleteButtons)
         $(`#edit-modal-${myEvent.id}`).click(() => setEditFormValues(myEvent))
         foundEvent = true;
         buttonFunc(myEvent)
