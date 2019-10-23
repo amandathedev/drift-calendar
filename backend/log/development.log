@@ -24426,3 +24426,32 @@ Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.5ms)
 >>>>>>> 84ee04aa19580eadf08118a1949e4f507a770c7c
 
 
+Started GET "/" for ::1 at 2019-10-23 08:36:04 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amandatreutler/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/amandatreutler/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/amandatreutler/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-10-23 08:47:20 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 76ms (Views: 48.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-10-23 08:54:36 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "user_events" ON "events"."id" = "user_events"."event_id" WHERE "user_events"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms)
+
+
