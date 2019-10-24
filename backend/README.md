@@ -7,7 +7,7 @@ A family calendar app for joint or shared schedules.
 Clone this repository to your system. Navigate to the backend directory and run:
 
 ```bash
-bundle
+bundle install
 ```
 Then navigate to the frontend directory and run:
 
