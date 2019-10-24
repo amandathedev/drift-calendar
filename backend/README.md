@@ -1,24 +1,27 @@
-# README
+# Drift Calendar ReadME
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A family calendar app for joint or shared schedules.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Clone this repository to your system. Navigate to the backend directory and run:
 
-* System dependencies
+```bash
+bundle
+```
+Then navigate to the frontend directory and run:
 
-* Configuration
+```bash
+npm install
+```
+After installation, run:
 
-* Database creation
+```bash
+npm start
+```
 
-* Database initialization
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
